@@ -112,7 +112,6 @@ public class AccountsControllerTest {
                     account2.getAccountId(),
                     new BigDecimal(3000)
             );
-    
     this.accountsService.sendMoney(transferBalanceRequest);
     this.mockMvc.perform(get("/v1/accounts/sendmoney"))
       .andExpect(status().isOk())
